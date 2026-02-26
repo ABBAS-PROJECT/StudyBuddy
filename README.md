@@ -31,7 +31,17 @@ StudyBuddy is a **cross-platform mobile application** designed to help students 
 </div>
 
 ---
+## 📸 Screenshots
 
+<div align="center">
+
+<img src="[screenshots/home.png](https://ibb.co/Dfrrbh5c)" width="250" alt="Home Screen" />
+<img src="screenshots/timer.png" width="250" alt="Add goals" />
+<img src="screenshots/history.png" width="250" alt="History" />
+<img src="screenshots/history.png" width="250" alt="History" />
+
+</div>
+---
 ## ✨ Features
 
 - ⏱️ **Real-Time Stopwatch** - Track study sessions with accurate timing
