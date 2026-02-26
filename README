@@ -1,0 +1,88 @@
+# 📚 StudyBuddy
+
+A cross-platform mobile application for tracking study sessions with cloud synchronization.
+
+## 📱 Download
+
+**[Download APK for Android](https://github.com/ABBAS-PROJECT/StudyBuddy/releases/latest)** ⬇️
+
+## ✨ Features
+
+- ⏱️ **Study Timer** - Track your study time with built-in stopwatch
+- 📊 **Session History** - View all your past study sessions
+- ☁️ **Cloud Sync** - Data automatically saved to Firebase
+- 💡 **Study Tips** - Get helpful study advice
+- 🎨 **Modern UI** - Beautiful, user-friendly interface
+
+## 🛠️ Built With
+
+- **.NET MAUI 9** - Cross-platform framework
+- **C# / XAML** - Programming languages
+- **Firebase Realtime Database** - Cloud storage
+- **Visual Studio 2022** - Development environment
+
+## 📸 Screenshots
+
+*(Coming soon)*
+
+## 🚀 How to Install
+
+### For Android Users:
+1. Download the APK from the [Releases](https://github.com/ABBAS-PROJECT/StudyBuddy/releases) page
+2. Transfer the APK to your Android device
+3. Enable "Install from unknown sources" in your device settings
+4. Open the APK and install
+5. Enjoy tracking your study sessions!
+
+**Requirements:** Android 5.0 or higher
+
+## 💻 For Developers
+
+### Prerequisites
+- Visual Studio 2022 (v17.14+)
+- .NET 9 SDK
+- .NET MAUI workload installed
+
+### Setup
+1. Clone this repository
+```bash
+git clone https://github.com/ABBAS-PROJECT/StudyBuddy.git
+```
+
+2. Open `StudyBuddy.sln` in Visual Studio
+
+3. The app is already configured with Firebase - it works out of the box!
+
+4. Select your target platform (Android/iOS/Windows)
+
+5. Build and run (F5)
+
+### Firebase Configuration (Optional)
+If you want to use your own Firebase database:
+1. Create a Firebase project at https://console.firebase.google.com
+2. Enable Realtime Database
+3. Update the Firebase URL in `FirebaseHelper.cs` (line 11)
+4. Set database rules to allow read/write access
+
+## 👨‍💻 Developer
+
+**Abbas Mohammad Khaled Ali**  
+Student ID: SW01081578  
+Universiti Tenaga Nasional
+
+## 📄 License
+
+This project is for educational purposes as part of mobile development coursework.
+
+## 🙏 Acknowledgments
+
+- Built with .NET MAUI
+- Firebase for backend services
+- Inspired by the need for better study tracking tools
+
+---
+
+**⭐ If you find this project helpful, please consider giving it a star!**
+```
+
+---
