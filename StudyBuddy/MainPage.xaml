@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyBuddy.MainPage"
+             BackgroundColor="{StaticResource LightGray}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Border StrokeThickness="0"
+                    Shadow="{Shadow Brush=Black, Opacity=0.1, Radius=8, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16"/>
+                </Border.StrokeShape>
+                <Image Source="banner.jpg" 
+                       Aspect="AspectFill"
+                       HeightRequest="200" />
+            </Border>
+
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="24"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="📚 Welcome to StudyBuddy!"
+                           FontSize="26"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalOptions="Center" />
+                    <Label Text="Your personal study tracking companion"
+                           FontSize="16"
+                           TextColor="{StaticResource MediumGray}"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="💡 Tip of the Day"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label x:Name="TipOfTheDayLabel"
+                           Text="Loading tip..."
+                           FontSize="16"
+                           TextColor="#1F2937"
+                           LineHeight="1.5" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="16">
+                    <Label Text="⚡ Quick Actions"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+
+                    <Button Text="➕ Add New Study Goal" 
+                            Clicked="AddGoalButton_Clicked"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            HeightRequest="52"
+                            CornerRadius="12" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="#EEF2FF"
+                    StrokeThickness="0"
+                    Padding="18"
+                    Margin="0,0,0,20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="✨ What you can do:"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="• Track your study sessions with timer"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="• View all your study goals in one place"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="• Get helpful study tips"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="• Monitor your progress over time"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

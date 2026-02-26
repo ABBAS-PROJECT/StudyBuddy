@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyBuddy.AddGoalPage"
+             Title="Add Goal"
+             BackgroundColor="{StaticResource LightGray}">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            
+            <!-- Page Title -->
+            <Label Text="📚 Track Your Study Session"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource Primary}"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,10" />
+
+            <!-- Subject Name Card -->
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.1, Radius=8, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="📖 Subject Name" 
+                           FontSize="18" 
+                           FontAttributes="Bold"
+                           TextColor="#1F2937" />
+                    <Entry x:Name="SubjectNameEntry" 
+                           Placeholder="e.g., Mathematics, Physics, Programming..." 
+                           FontSize="16"
+                           BackgroundColor="{StaticResource LightGray}"
+                           ClearButtonVisibility="WhileEditing" />
+                    <Label Text="Enter the subject you're studying"
+                           FontSize="13"
+                           TextColor="{StaticResource MediumGray}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Timer Card -->
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="24"
+                    Shadow="{Shadow Brush=Black, Opacity=0.1, Radius=8, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="16">
+                    <Label Text="⏱️ Study Timer" 
+                           FontSize="18" 
+                           FontAttributes="Bold"
+                           TextColor="#1F2937"
+                           HorizontalOptions="Center" />
+                    
+                    <!-- Timer Display -->
+                    <Border BackgroundColor="{StaticResource Primary}"
+                            StrokeThickness="0"
+                            Padding="24,20">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16"/>
+                        </Border.StrokeShape>
+                        <Label x:Name="StopwatchLabel" 
+                               Text="00:00:00" 
+                               FontSize="52" 
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="Center" />
+                    </Border>
+
+                    <Label Text="Click Start to begin tracking your time"
+                           FontSize="13"
+                           TextColor="{StaticResource MediumGray}"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Control Buttons -->
+            <VerticalStackLayout Spacing="12" Margin="0,8,0,0">
+                
+                <!-- Start/Stop Button -->
+                <Button x:Name="StartStopButton" 
+                        Text="Start" 
+                        Clicked="StartStopButton_Clicked" 
+                        BackgroundColor="{StaticResource Success}"
+                        TextColor="White"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HeightRequest="56"
+                        CornerRadius="12" />
+
+                <!-- Reset and Save Buttons -->
+                <Grid ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0"
+                            x:Name="ResetButton"
+                            Text="🔄 Reset" 
+                            Clicked="ResetButton_Clicked" 
+                            BackgroundColor="{StaticResource MediumGray}"
+                            TextColor="White"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            HeightRequest="52"
+                            CornerRadius="12" />
+
+                    <Button Grid.Column="1"
+                            x:Name="SaveButton"
+                            Text="💾 Save Goal" 
+                            Clicked="SaveButton_Clicked" 
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White"
+                            FontSize="16"
+                            FontAttributes="Bold"
+                            HeightRequest="52"
+                            CornerRadius="12" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Help Instructions -->
+            <Border BackgroundColor="#EEF2FF"
+                    StrokeThickness="0"
+                    Padding="18"
+                    Margin="0,12,0,20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="💡 How to use"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="1. Enter your subject name above"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="2. Press Start when you begin studying"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="3. Press Stop when you're finished"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                    <Label Text="4. Click Save to record your session"
+                           FontSize="14"
+                           TextColor="{StaticResource DarkGray}" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

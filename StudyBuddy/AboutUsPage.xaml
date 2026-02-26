@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyBuddy.AboutUsPage"
+             Title="About Us"
+             BackgroundColor="{StaticResource LightGray}">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- App Logo - Better Design -->
+            <Border BackgroundColor="{StaticResource Primary}"
+                    StrokeThickness="0"
+                    Padding="32"
+                    Shadow="{Shadow Brush=Black, Opacity=0.15, Radius=10, Offset='0,4'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <!-- Modern Icon -->
+                    <Label Text="📖"
+                           FontSize="80"
+                           HorizontalOptions="Center" />
+                    <Label Text="StudyBuddy"
+                           FontSize="36"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Center" />
+                    <Label Text="Track • Study • Succeed"
+                           FontSize="16"
+                           TextColor="White"
+                           Opacity="0.95"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Developer Information -->
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="👨‍💻 Developer Information" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="📝" FontSize="18" />
+                        <Label Text="Name:" 
+                               FontSize="16" 
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource DarkGray}" />
+                    </HorizontalStackLayout>
+                    <Label Text="Abbas Mohammad Khaled Ali" 
+                           FontSize="16"
+                           Margin="32,0,0,0"
+                           TextColor="#1F2937" />
+
+                    <HorizontalStackLayout Spacing="8" Margin="0,8,0,0">
+                        <Label Text="🎓" FontSize="18" />
+                        <Label Text="Student ID:" 
+                               FontSize="16" 
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource DarkGray}" />
+                    </HorizontalStackLayout>
+                    <Label Text="SW01081578" 
+                           FontSize="16"
+                           Margin="32,0,0,0"
+                           TextColor="#1F2937" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- App Introduction -->
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="ℹ️ About This App" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="StudyBuddy is a productivity app designed to help students manage their study goals effectively. It allows users to set study goals, track time spent on each subject using a stopwatch, and save these records to Firebase for future reference." 
+                           FontSize="16"
+                           TextColor="#1F2937"
+                           LineHeight="1.5" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Features -->
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    Padding="20"
+                    Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="✨ Features" 
+                           FontSize="20" 
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="⏱️" FontSize="18" />
+                        <Label Text="Study Timer" 
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource DarkGray}"
+                               VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Label Text="Track your study time with an easy-to-use stopwatch"
+                           FontSize="14"
+                           Margin="32,0,0,8"
+                           TextColor="#6B7280" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="☁️" FontSize="18" />
+                        <Label Text="Cloud Storage" 
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource DarkGray}"
+                               VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Label Text="All your goals are saved to Firebase and synced across devices"
+                           FontSize="14"
+                           Margin="32,0,0,8"
+                           TextColor="#6B7280" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Label Text="💡" FontSize="18" />
+                        <Label Text="Study Tips" 
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource DarkGray}"
+                               VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+                    <Label Text="Get helpful tips to improve your study efficiency"
+                           FontSize="14"
+                           Margin="32,0,0,8"
+                           TextColor="#6B7280" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Version Info -->
+            <Border BackgroundColor="#EEF2FF"
+                    StrokeThickness="0"
+                    Padding="16"
+                    Margin="0,0,0,20">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Version 1.0"
+                           FontSize="14"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"
+                           HorizontalOptions="Center" />
+                    <Label Text="Built with .NET MAUI 9"
+                           FontSize="12"
+                           TextColor="{StaticResource MediumGray}"
+                           HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

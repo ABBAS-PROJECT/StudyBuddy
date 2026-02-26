@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudyBuddy.GoalsListPage"
+             Title="My Study Goals"
+             BackgroundColor="{StaticResource LightGray}">
+
+    <Grid>
+        <CollectionView x:Name="GoalRecordsCollectionView"
+                        Margin="16,12">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="White"
+                            StrokeThickness="0"
+                            Padding="18"
+                            Margin="0,0,0,12"
+                            Shadow="{Shadow Brush=Black, Opacity=0.08, Radius=6, Offset='0,2'}">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="12"/>
+                        </Border.StrokeShape>
+                        <Grid RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" 
+                                   Grid.Column="0"
+                                   Text="{Binding SubjectName}" 
+                                   FontSize="20" 
+                                   FontAttributes="Bold"
+                                   TextColor="#6366F1" />
+
+                            <HorizontalStackLayout Grid.Row="1" 
+                                                  Grid.Column="0"
+                                                  Spacing="6">
+                                <Label Text="⏱️" 
+                                       FontSize="16" />
+                                <Label Text="{Binding StudyDuration, StringFormat='Duration: {0:hh\\:mm\\:ss}'}" 
+                                       FontSize="16"
+                                       FontAttributes="Bold"
+                                       TextColor="#1F2937" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout Grid.Row="2" 
+                                                  Grid.Column="0"
+                                                  Spacing="6">
+                                <Label Text="📅" 
+                                       FontSize="14" />
+                                <Label Text="{Binding CreatedAt, StringFormat='Date: {0:MMM dd, yyyy - hh:mm tt}'}" 
+                                       FontSize="14"
+                                       TextColor="#6B7280" />
+                            </HorizontalStackLayout>
+
+                            <Button Grid.Row="0" 
+                                    Grid.Column="1" 
+                                    Grid.RowSpan="3"
+                                    Text="Delete" 
+                                    Clicked="DeleteButton_Clicked" 
+                                    CommandParameter="{Binding Id}" 
+                                    BackgroundColor="#EF4444"
+                                    TextColor="White"
+                                    WidthRequest="85"
+                                    HeightRequest="42"
+                                    FontSize="14"
+                                    FontAttributes="Bold"
+                                    CornerRadius="10"
+                                    VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    Spacing="16"
+                                    Padding="40">
+                    <Label Text="📚"
+                           FontSize="72"
+                           HorizontalOptions="Center" />
+                    <Label Text="No study goals yet!"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           TextColor="#4B5563"
+                           HorizontalOptions="Center" />
+                    <Label Text="Start tracking your study sessions&#10;by adding a new goal from the menu."
+                           FontSize="16"
+                           TextColor="#9CA3AF"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           LineHeight="1.4" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </Grid>
+</ContentPage>

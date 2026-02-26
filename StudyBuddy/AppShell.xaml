@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="StudyBuddy.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StudyBuddy"
+    Shell.FlyoutBehavior="Flyout"
+    Title="StudyBuddy">
+
+    <FlyoutItem Title="Home"
+                Icon="home.png">
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Add Goals"
+                Icon="add_goals.png">
+        <ShellContent
+            Title="Add Goals"
+            ContentTemplate="{DataTemplate local:AddGoalPage}"
+            Route="AddGoalsPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Goals List"
+                Icon="goals_list.png">
+        <ShellContent
+            Title="Goals List"
+            ContentTemplate="{DataTemplate local:GoalsListPage}"
+            Route="GoalsListPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Tips"
+                Icon="tips.png">
+        <ShellContent
+            Title="Tips"
+            ContentTemplate="{DataTemplate local:TipsPage}"
+            Route="TipsPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="About Us">
+        <ShellContent
+            Title="About Us"
+            ContentTemplate="{DataTemplate local:AboutUsPage}"
+            Route="AboutUsPage"/>
+    </FlyoutItem>
+
+</Shell>
