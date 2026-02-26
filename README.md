@@ -35,13 +35,16 @@ StudyBuddy is a **cross-platform mobile application** designed to help students 
 
 <div align="center">
 
-<img src="[screenshots/home.png](https://ibb.co/Dfrrbh5c)" width="250" alt="Home Screen" />
-<img src="screenshots/timer.png" width="250" alt="Add goals" />
-<img src="screenshots/history.png" width="250" alt="History" />
-<img src="screenshots/history.png" width="250" alt="History" />
+| Home Screen | Add Goal | Study Goals | Study ips |
+|-------------|----------|-------------|---------------|
+| <img src="https://github.com/user-attachments/assets/06cea902-67d4-4699-baaa-d13c0dbb6c5c" width="200" /> | <img src="https://github.com/user-attachments/assets/0953338b-b63c-4ec9-895c-617198496e2d" width="200" /> | <img src="https://github.com/user-attachments/assets/ade75c10-7d06-4faa-b2d8-cce97660f1c0" width="200" /> | <img src="https://github.com/user-attachments/assets/d68ac857-73f5-4461-adba-50ea72b1a415" width="200" /> |
+
+*StudyBuddy in action - Cross-platform mobile app built with .NET MAUI 9*
 
 </div>
 ---
+
+
 ## ✨ Features
 
 - ⏱️ **Real-Time Stopwatch** - Track study sessions with accurate timing
